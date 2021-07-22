@@ -1,16 +1,17 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import './util/global'
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import "./util/global";
+import reportWebVitals from "./reportWebVitals";
 import { loadDevTools } from "jira-dev-tool";
-import { AppProviders } from "./sceens/context"
+import "antd/dist/antd.less";
+import { AppProviders } from "./sceens/context";
 loadDevTools(() => {
   ReactDOM.render(
     <React.StrictMode>
       <AppProviders>
-            <App />
+        <App />
       </AppProviders>
     </React.StrictMode>,
     document.getElementById("root")

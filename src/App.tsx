@@ -8,22 +8,25 @@
  */
 import React from "react";
 import "./App.css";
-// import { ProjectList } from "./sceens/project-list";
-import { LoginScreen } from './sceens/login/index'
+import { ProjectList } from "./sceens/project-list";
+// import { LoginScreen } from './sceens/login/index'
 // import Calculator from './sceens/statusUp/Calculator'
 // import Parent from './sceens/context'
 // import Refs from './sceens/refs'
-import { useAuth } from './sceens/context/auth-context'
+import { useAuth } from "./sceens/context/auth-context";
 import { UnauthenticatedApp } from "unauthenticted-app";
-import { AuthenticatedApp } from 'authenticated-app'
+import { AuthenticatedApp } from "authenticated-app";
 function App() {
-  const { user } = useAuth()
+  const { user } = useAuth();
   return (
     <div className="App">
-      {
-        user ? <AuthenticatedApp /> : <UnauthenticatedApp /> 
-      
-      }
+      {user ? (
+        <>
+          <AuthenticatedApp /> <ProjectList />
+        </>
+      ) : (
+        <UnauthenticatedApp />
+      )}
     </div>
   );
 }
