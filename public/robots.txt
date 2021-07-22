@@ -1,0 +1,6 @@
+// 设置爬虫可以对我页面做什么
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+
+// 这里没有设置，说明都可以访问
+Disallow:
